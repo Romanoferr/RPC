@@ -1,7 +1,6 @@
 import rpyc
 import time
 
-
 class MyService(rpyc.Service):
     def on_connect(self, conn):
         # código que é executado quando uma conexão é iniciada
@@ -25,11 +24,7 @@ class MyService(rpyc.Service):
 
     def exposed_sum_vector(self, vector):
         # método para somar os elementos de um vetor
-        start = time.time()
         result = sum(vector)
-        end = time.time()
-        execution_time = end - start
-        print(f"Tempo de execução no servidor: {execution_time}")
         return result
 
 
