@@ -24,7 +24,11 @@ class MyService(rpyc.Service):
 
     def exposed_sum_vector(self, vector):
         # método para somar os elementos de um vetor
+        start = time.time()
         result = sum(vector)
+        end = time.time()
+        execution_time = end - start
+        print(f"Tempo de execução no servidor: {execution_time} segundos")
         return result
 
 

@@ -2,6 +2,8 @@ import rpyc
 import sys
 import time
 
+# Arquivo proxy - não precisa usar pra executar questões específicas
+
 if len(sys.argv) < 3:
     exit("Usage {} SERVER VECTOR_SIZE".format(sys.argv[0]))
 
@@ -21,7 +23,7 @@ print("Valor de the_real_answer_though:", conn.root.the_real_answer_though)
 # print(conn.get_question())
 # print(conn.root.get_question)
 
-# Para a questão 4 - criando um vetor de n posições e somando
+# Para a questão 4 e 5 - criando um vetor de n posições e somando
 vector = list(range(n))
 print(f"\nSomando vetor com {n} elementos...")
 
